@@ -1,9 +1,8 @@
 const express = require('express')
 const app = express()
-const port = 5000 || process.env.PORT
+const port =  process.env.PORT || 5000;
 const dotenv = require('dotenv');
 const { MongoClient } = require("mongodb");
-// const { json } = require('express');
 const cors = require('cors')
 
 app.use(cors())
@@ -34,12 +33,7 @@ async function run() {
         const blogsCollection = database.collection('blogs');
         const usersCollection = database.collection('users');
 
-        app.get('/blogs', async(req, res) => {
-            res.send('Blogs')
-        })
-        app.post('/blogs', async(req, res) => {
-            res.send('Blogs')
-        })
+        
 
         
 
